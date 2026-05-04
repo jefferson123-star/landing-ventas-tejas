@@ -23,55 +23,19 @@ html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; color: var(--text-dark); background: var(--blanco); }
 
 /* NAV */
-nav {
-  background: var(--azul);
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  height: 64px;
-}
+nav { background: #fff; border-bottom: 1px solid var(--gris-border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; height: 64px; }
 .nav-logo img { height: 38px; }
 .nav-actions { display: flex; gap: 10px; align-items: center; }
 .nav-wa { background: #25D366; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px; }
 .nav-cta { background: var(--rojo); color: #fff; padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
-.nav-phone { color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 6px; }
-.nav-phone:hover { color: #fff; }
+.nav-phone { color: var(--azul); font-size: 13px; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+.nav-phone:hover { color: var(--rojo); }
 
 /* HERO */
-.hero {
-  background: var(--azul);
-  color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 580px;
-  align-items: center;
-  overflow: hidden;
-}
+.hero { background: var(--azul); color: #fff; display: grid; grid-template-columns: 1fr 1fr; min-height: 580px; align-items: center; overflow: hidden; }
 .hero-content { padding: 60px 60px 60px 80px; }
-.hero-badge {
-  display: inline-block;
-  background: rgba(192,57,43,0.25);
-  border: 1px solid rgba(192,57,43,0.5);
-  color: #f5a89a;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 14px;
-  border-radius: 99px;
-  margin-bottom: 20px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4vw, 52px);
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 16px;
-}
+.hero-badge { display: inline-block; background: rgba(192,57,43,0.25); border: 1px solid rgba(192,57,43,0.5); color: #f5a89a; font-size: 11px; font-weight: 600; padding: 4px 14px; border-radius: 99px; margin-bottom: 20px; letter-spacing: 0.1em; text-transform: uppercase; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 900; line-height: 1.1; margin-bottom: 16px; }
 .hero h1 span { color: var(--rojo); }
 .hero-sub { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.65; margin-bottom: 32px; max-width: 440px; }
 .hero-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
@@ -88,7 +52,7 @@ nav {
 .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
 .hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(to right, var(--azul) 0%, transparent 40%); }
 
-/* SECTION */
+/* SECTIONS */
 .section { padding: 72px 80px; max-width: 1200px; margin: 0 auto; }
 .section-full { padding: 72px 0; }
 .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 80px; }
@@ -108,26 +72,25 @@ nav {
 .productos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .producto-card { background: var(--blanco); border-radius: 14px; overflow: hidden; border: 1px solid var(--gris-border); transition: transform 0.2s, box-shadow 0.2s; }
 .producto-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(26,58,107,0.1); }
-.producto-img { height: 220px; overflow: hidden; position: relative; }
-.producto-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.producto-img { height: 240px; overflow: hidden; position: relative; background: #f0f0ee; display: flex; align-items: center; justify-content: center; }
+.producto-img img { width: 100%; height: 100%; object-fit: contain; padding: 16px; transition: transform 0.3s; }
 .producto-card:hover .producto-img img { transform: scale(1.05); }
 .producto-tag { position: absolute; top: 14px; left: 14px; background: var(--azul); color: #fff; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 99px; }
 .producto-body { padding: 22px; }
 .producto-body h3 { font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
 .producto-body p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
-.producto-price { font-size: 18px; font-weight: 600; color: var(--rojo); margin-bottom: 14px; }
-.producto-features { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.producto-price { font-size: 20px; font-weight: 700; color: var(--rojo); margin-bottom: 14px; }
+.producto-features { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 18px; }
 .producto-features li { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 7px; }
 .producto-features li::before { content: ''; width: 5px; height: 5px; background: var(--rojo); border-radius: 50%; flex-shrink: 0; }
-.producto-btn { display: block; margin-top: 18px; background: var(--azul); color: #fff; text-align: center; padding: 10px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+.producto-btn { display: block; background: var(--azul); color: #fff; text-align: center; padding: 11px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
 .producto-btn:hover { opacity: 0.85; }
 
 /* PROYECTOS */
 .proyectos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .proyecto-img { border-radius: 10px; overflow: hidden; aspect-ratio: 4/3; }
-.proyecto-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.proyecto-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; display: block; }
 .proyecto-img:hover img { transform: scale(1.05); }
-.proyecto-img-large { grid-column: span 2; aspect-ratio: 16/9; }
 
 /* GARANTIA BANNER */
 .garantia-banner { background: var(--rojo); color: #fff; padding: 60px 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
@@ -161,11 +124,7 @@ nav {
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .form-group { margin-bottom: 14px; }
 .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
-.form-group input, .form-group select, .form-group textarea {
-  width: 100%; padding: 10px 13px; border: 1.5px solid var(--gris-border); border-radius: 8px;
-  font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--text-dark);
-  background: var(--blanco); outline: none; transition: border-color 0.2s;
-}
+.form-group input, .form-group select { width: 100%; padding: 10px 13px; border: 1.5px solid var(--gris-border); border-radius: 8px; font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--text-dark); background: var(--blanco); outline: none; transition: border-color 0.2s; }
 .form-group input:focus, .form-group select:focus { border-color: var(--azul); }
 .form-submit { width: 100%; background: var(--rojo); color: #fff; padding: 14px; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: opacity 0.2s; margin-top: 6px; }
 .form-submit:hover { opacity: 0.88; }
@@ -188,7 +147,6 @@ footer a:hover { color: #fff; }
   .benefits-grid { grid-template-columns: 1fr 1fr; }
   .productos-grid { grid-template-columns: 1fr; }
   .proyectos-grid { grid-template-columns: 1fr 1fr; }
-  .proyecto-img-large { grid-column: span 1; }
   .contacto-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   footer { padding: 24px; flex-direction: column; text-align: center; }
@@ -216,7 +174,7 @@ footer a:hover { color: #fff; }
   </a>
   <div class="nav-actions">
     <a href="tel:+573002969010" class="nav-phone">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
       300 296 9010
     </a>
     <a href="https://wa.me/573002969010" target="_blank" class="nav-wa">
@@ -263,35 +221,35 @@ footer a:hover { color: #fff; }
 <section class="section">
   <div class="label-tag">¿Por qué elegirnos?</div>
   <div class="section-title">La solución que tu techo necesita</div>
-  <div class="section-sub">Reducimos el calor y el ruido en cualquier espacio — residencial, comercial o industrial.</div>
+  <div class="section-sub">Reducimos el calor y el ruido en cualquier espacio — residencial, comercial o industrial. Con una vida útil de hasta 30 años.</div>
   <div class="benefits-grid">
     <div class="benefit-card">
       <div class="benefit-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.728 12.728l.707.707M3 12H2m20 0h-1M4.927 19.073l.707-.707M18.366 4.927l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
       </div>
-      <h3>Reduce el calor hasta 70%</h3>
-      <p>Material UPVC de alta densidad que refleja los rayos UV y mantiene tu espacio fresco.</p>
+      <h3>Reduce el calor hasta 10°C</h3>
+      <p>Material UPVC de alta densidad que refleja los rayos UV y reduce hasta 10 grados la temperatura externa de tu espacio.</p>
     </div>
     <div class="benefit-card">
       <div class="benefit-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M15.536 8.464a5 5 0 010 7.072M12 9.5v5m-3.536-6.036a5 5 0 000 7.072"/></svg>
       </div>
       <h3>Aislamiento de ruido</h3>
-      <p>Reduce el ruido exterior — ideal para zonas de alto tráfico, lluvia o industria.</p>
+      <p>Reduce el ruido exterior — ideal para zonas de alto tráfico, lluvia intensa o actividad industrial.</p>
     </div>
     <div class="benefit-card">
       <div class="benefit-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
       </div>
-      <h3>10 años de garantía</h3>
-      <p>Somos importadores directos. Respaldamos cada teja con garantía de fábrica.</p>
+      <h3>Garantía certificada de 10 años</h3>
+      <p>Somos importadores directos. Respaldamos cada teja con garantía certificada de 10 años de fábrica, sin intermediarios.</p>
     </div>
     <div class="benefit-card">
       <div class="benefit-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
       </div>
       <h3>Envíos a todo el país</h3>
-      <p>Despachos a todas las ciudades y municipios de Colombia. Entrega rápida y segura.</p>
+      <p>Despachos desde Bogotá a todo Colombia. El costo del envío no está incluido en el precio y no manejamos pago contra entrega.</p>
     </div>
   </div>
 </section>
@@ -303,24 +261,45 @@ footer a:hover { color: #fff; }
     <div class="section-title">3 tipos de teja termoacústica</div>
     <div class="section-sub">Cada proyecto es diferente. Tenemos la opción ideal para tu espacio y presupuesto.</div>
     <div class="productos-grid">
+
       <div class="producto-card">
         <div class="producto-img">
-          <img src="https://www.goodtrade.com.co/wp-content/uploads/2024/04/TEJA-UPVC-2-300x300.jpg" alt="Teja Termoacústica UPVC Trapezoidal">
-          <span class="producto-tag">Industrial · Comercial</span>
+          <img src="https://www.goodtrade.com.co/wp-content/uploads/2024/04/Teja-Termoacustica-UPVC-PERFIL-ALTO-2MM-Blanca-300x300.jpeg" alt="Teja Termoacústica UPVC 2.5MM">
+          <span class="producto-tag">Más vendida</span>
         </div>
         <div class="producto-body">
-          <h3>Teja Termoacústica UPVC Trapezoidal</h3>
-          <p>La más resistente del catálogo. Perfecta para bodegas, galpones y grandes cubiertas.</p>
-          <div class="producto-price">Desde $250.000</div>
+          <h3>Teja Termoacústica UPVC Perfil Alto 2.5 MM</h3>
+          <p>La más resistente del catálogo. Mayor grosor para mejor aislamiento — perfecta para bodegas, galpones y grandes cubiertas.</p>
+          <div class="producto-price">Desde $290.000</div>
           <ul class="producto-features">
+            <li>Grosor 2.5 mm — mayor durabilidad</li>
             <li>Alta resistencia al impacto</li>
             <li>Liviana y fácil de instalar</li>
-            <li>Perfil alto disponible en 2mm y 2.5mm</li>
             <li>Múltiples colores disponibles</li>
           </ul>
-          <a href="https://wa.me/573002969010?text=Hola!%20Quiero%20información%20sobre%20la%20Teja%20Termoacústica%20UPVC%20Trapezoidal" target="_blank" class="producto-btn">Cotizar por WhatsApp</a>
+          <a href="https://wa.me/573002969010?text=Hola!%20Quiero%20información%20sobre%20la%20Teja%20Termoacústica%20UPVC%202.5MM" target="_blank" class="producto-btn">Cotizar por WhatsApp</a>
         </div>
       </div>
+
+      <div class="producto-card">
+        <div class="producto-img">
+          <img src="https://www.goodtrade.com.co/wp-content/uploads/2024/04/TEJA-UPVC-2-300x300.jpg" alt="Teja Termoacústica UPVC 2MM">
+          <span class="producto-tag">Económica</span>
+        </div>
+        <div class="producto-body">
+          <h3>Teja Termoacústica UPVC Perfil Alto 2 MM</h3>
+          <p>Excelente relación calidad-precio. Ideal para proyectos residenciales y comerciales con presupuesto optimizado.</p>
+          <div class="producto-price">Desde $250.000</div>
+          <ul class="producto-features">
+            <li>Grosor 2 mm — liviana y versátil</li>
+            <li>Reduce calor y ruido eficientemente</li>
+            <li>Fácil instalación</li>
+            <li>Disponible en varios colores</li>
+          </ul>
+          <a href="https://wa.me/573002969010?text=Hola!%20Quiero%20información%20sobre%20la%20Teja%20Termoacústica%20UPVC%202MM" target="_blank" class="producto-btn">Cotizar por WhatsApp</a>
+        </div>
+      </div>
+
       <div class="producto-card">
         <div class="producto-img">
           <img src="https://www.goodtrade.com.co/wp-content/uploads/2024/04/Teja-Colonial-Terracota-Goodtrade-300x300.webp" alt="Teja Colonial Terracota">
@@ -328,7 +307,7 @@ footer a:hover { color: #fff; }
         </div>
         <div class="producto-body">
           <h3>Teja Termoacústica Tipo Colonial</h3>
-          <p>Estética colonial tradicional con tecnología termoacústica. El look que enamora con el confort moderno.</p>
+          <p>Estética colonial tradicional con tecnología termoacústica moderna. El look que enamora con el confort que necesitas.</p>
           <div class="producto-price">Desde $290.000</div>
           <ul class="producto-features">
             <li>Diseño colonial elegante</li>
@@ -336,27 +315,10 @@ footer a:hover { color: #fff; }
             <li>Ideal para casas y conjuntos</li>
             <li>10 años de garantía</li>
           </ul>
-          <a href="https://wa.me/573002969010?text=Hola!%20Quiero%20información%20sobre%20la%20Teja%20Termoacústica%20Colonial" target="_blank" class="producto-btn">Cotizar por WhatsApp</a>
+          <a href="https://wa.me/573002969010?text=Hola!%20Quiero%20información%20sobre%20la%20Teja%20Colonial%20Termoacústica" target="_blank" class="producto-btn">Cotizar por WhatsApp</a>
         </div>
       </div>
-      <div class="producto-card">
-        <div class="producto-img">
-          <img src="https://www.goodtrade.com.co/wp-content/uploads/2024/04/Teja-Termoacustica-UPVC-PERFIL-ALTO-2MM-Blanca-300x300.jpeg" alt="Teja Española Termoacústica">
-          <span class="producto-tag">Premium</span>
-        </div>
-        <div class="producto-body">
-          <h3>Teja Española Termoacústica</h3>
-          <p>La opción premium. Combina estética arquitectónica de primer nivel con el mejor aislamiento del mercado.</p>
-          <div class="producto-price">Desde $290.000</div>
-          <ul class="producto-features">
-            <li>Diseño español auténtico</li>
-            <li>Máximo aislamiento térmico</li>
-            <li>Para proyectos de alto nivel</li>
-            <li>Importación directa</li>
-          </ul>
-          <a href="https://wa.me/573002969010?text=Hola!%20Quiero%20información%20sobre%20la%20Teja%20Española%20Termoacústica" target="_blank" class="producto-btn">Cotizar por WhatsApp</a>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -367,7 +329,7 @@ footer a:hover { color: #fff; }
   <div class="section-title">Presentes en todo el país</div>
   <div class="section-sub">Más de 500 proyectos realizados en Bogotá y todo Colombia.</div>
   <div class="proyectos-grid">
-    <div class="proyecto-img proyecto-img-large">
+    <div class="proyecto-img">
       <img src="https://www.goodtrade.com.co/wp-content/uploads/2024/02/tejas-termoacusticas.jpg" alt="Proyecto Goodtrade">
     </div>
     <div class="proyecto-img">
@@ -412,12 +374,12 @@ footer a:hover { color: #fff; }
           </a>
           <a href="tel:+573002969010" class="contact-btn call">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            <div class="contact-btn-text"><strong>Llamar ahora</strong><small>300 296 9010 · 324 252 8378 · (601) 704 1429</small></div>
+            <div class="contact-btn-text"><strong>Llamar ahora</strong><small>300 296 9010</small></div>
           </a>
-          <div class="contact-btn">
+          <a href="https://www.google.com/maps/search/Calle+68a+%2387-62+Bogota" target="_blank" class="contact-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <div class="contact-btn-text"><strong>Visítanos</strong><small>Av. Calle 80 #92-67 · Bogotá D.C.</small></div>
-          </div>
+            <div class="contact-btn-text"><strong>Visítanos</strong><small>Calle 68a #87-62 · Bogotá D.C.</small></div>
+          </a>
           <div class="contact-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             <div class="contact-btn-text"><strong>Horario de atención</strong><small>Lun–Vie 8am–5pm · Sáb 8am–12pm</small></div>
@@ -442,9 +404,9 @@ footer a:hover { color: #fff; }
             <label>Tipo de teja</label>
             <select required>
               <option value="">Selecciona una opción</option>
-              <option>Teja Termoacústica UPVC Trapezoidal</option>
+              <option>Teja Termoacústica UPVC 2.5 MM</option>
+              <option>Teja Termoacústica UPVC 2 MM</option>
               <option>Teja Termoacústica Colonial</option>
-              <option>Teja Española Termoacústica</option>
               <option>No sé, necesito asesoría</option>
             </select>
           </div>
@@ -493,13 +455,12 @@ footer a:hover { color: #fff; }
 function handleSubmit(e) {
   e.preventDefault();
   const f = e.target;
-  const inputs = f.querySelectorAll('input, select');
-  const nombre = inputs[0].value;
-  const tel = inputs[1].value;
-  const teja = inputs[2].value;
-  const espacio = inputs[3].value;
-  const area = inputs[4].value;
-  const ciudad = inputs[5].value;
+  const nombre = f.querySelectorAll('input')[0].value;
+  const tel = f.querySelectorAll('input')[1].value;
+  const teja = f.querySelectorAll('select')[0].value;
+  const espacio = f.querySelectorAll('select')[1].value;
+  const area = f.querySelectorAll('select')[2].value;
+  const ciudad = f.querySelectorAll('input')[2].value;
   const msg = encodeURIComponent(
     `Hola! Me registré en la página web de Goodtrade.\n\n` +
     `*Nombre:* ${nombre}\n` +

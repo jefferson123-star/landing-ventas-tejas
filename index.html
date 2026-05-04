@@ -368,28 +368,24 @@ footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
             </select>
           </div>
           <div class="form-group">
-            <label>Tipo de espacio</label>
+            <label>Área aproximada</label>
             <select required>
-              <option value="">¿Qué quieres cubrir?</option>
-              <option>Terraza</option>
-              <option>Bodega o galpón</option>
-              <option>Casa o vivienda</option>
-              <option>Local o negocio</option>
-              <option>Otro</option>
+              <option value="">¿Cuántos m² necesitas techar?</option>
+              <option>30 a 80 m²</option>
+              <option>81 a 100 m²</option>
+              <option>Más de 100 m²</option>
+              <option>No sé, necesito ayuda para calcular</option>
             </select>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Área aproximada</label>
-              <select required>
-                <option value="">¿Cuántos m²?</option>
-                <option>30 a 80 m²</option>
-                <option>81 a 100 m²</option>
-                <option>Más de 100 m²</option>
-                <option>No sé</option>
-              </select>
-            </div>
-            <div class="form-group"><label>Ciudad</label><input type="text" placeholder="Tu ciudad" required></div>
+          <div class="form-group">
+            <label>Ciudad</label>
+            <input type="text" placeholder="Tu ciudad" required>
+          </div>
+                              <div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-top:4px;">
+            <input type="checkbox" id="politica" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#1a3a6b;">
+            <label for="politica" style="font-size:12px;color:#5f5e5a;text-transform:none;letter-spacing:0;font-weight:400;line-height:1.5;">
+              Acepto la <a href="https://www.goodtrade.com.co/politica-de-privacidad/" target="_blank" style="color:#1a3a6b;font-weight:600;">Política de Tratamiento de Datos Personales</a> de Goodtrade conforme a la Ley 1581 de 2012.
+            </label>
           </div>
           <button type="submit" class="form-submit">Enviar solicitud de cotización</button>
           <p class="form-note">Un asesor te contactará en menos de 30 minutos en horario hábil.</p>
